@@ -163,6 +163,16 @@ function Chapter1() {
         </p>
         <p className="text-amber-400 text-sm mt-2 font-semibold">— Ralph E. Mong Sr.</p>
         <p className="text-amber-600 text-xs mt-1">Verone VanWormer's Grandfather · Born 1899 · Words passed down and still being lived</p>
+        <div className="mt-3 pt-3 border-t border-amber-900/40">
+          <p className="text-gray-400 text-xs leading-relaxed">
+            Farmer. Huckster. Mayor of Knox, PA for nearly a decade. Box factory worker.
+            And a man who — long before the internet, long before anyone called it lifelong
+            learning — held mail order degrees in{' '}
+            <span className="text-amber-500">Model T auto repair</span> and{' '}
+            <span className="text-amber-500">taxidermy</span>. He was remarkable for his time,
+            and his advice has outlived the century he was born into.
+          </p>
+        </div>
       </div>
 
       <p className="text-gray-300 leading-relaxed mb-4">
