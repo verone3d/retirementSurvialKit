@@ -1605,13 +1605,22 @@ function Chapter11() {
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
               On <strong className="text-white">July 19, 2020</strong> — a date I will never forget
               — I woke up blind in my left eye. Three eye surgeries and over two months away from
-              work followed. It was the first extended time off in my life. During that time,
-              searching and thinking and trying to make sense of it, I came across a video of a
-              young woman describing why and how she started a charity called{' '}
-              <strong className="text-white">See3D</strong> — an organization that connects 3D
-              printing volunteers with visually impaired individuals who benefit from tactile
-              models. Something clicked. Out of one of the hardest seasons of my life came one
-              of the most meaningful paths I have walked.
+              work followed. It was the first extended time off in my life.
+            </p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              People would ask me: <em className="text-gray-200">were you scared?</em> The honest
+              answer is no. The very first thing that crossed my mind was:{' '}
+              <strong className="text-white">how would I be able to keep designing and 3D printing
+              if I could not see?</strong> That was it. That was the thought. Which tells you
+              everything about how deep that passion had already gone.
+            </p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              So I started researching — what do people who lose their vision do, how do they
+              keep creating, what tools exist? That search led me to a video of a young woman
+              describing why and how she started a charity called{' '}
+              <strong className="text-white">See3D</strong>. I found them early in their
+              existence. Something clicked immediately. Out of one of the hardest seasons of my
+              life came one of the most meaningful paths I have walked.
             </p>
             <ResourceLink
               title="The video that started it — See3D Founder"
@@ -1622,6 +1631,18 @@ function Chapter11() {
               title="See3D.org"
               description="Connecting 3D printing volunteers with visually impaired individuals who benefit from tactile models."
               href="https://see3d.org"
+            />
+            <p className="text-gray-400 text-sm leading-relaxed mt-3">
+              That same period of research also led me to{' '}
+              <strong className="text-white">Desktop Makes</strong> — a site that promotes Fusion
+              360 model design and runs a weekly group class. I have been a long-standing member
+              of that class ever since. If you want to go deeper into 3D design, it is one of
+              the best ongoing learning communities I have found.
+            </p>
+            <ResourceLink
+              title="Desktop Makes"
+              description="Weekly Fusion 360 design classes and a strong community of makers. Where I go to keep growing as a designer."
+              href="https://www.desktopmakes.com"
             />
           </div>
         </div>
