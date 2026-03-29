@@ -247,6 +247,34 @@ function Chapter1() {
         <div className="flex gap-4">
           <StepNumber n={3} />
           <div>
+            <p className="text-gray-200 font-medium mb-1">No one is going to look out for you — you have to do it yourself</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              Your doctor sees you for fifteen minutes twice a year. Your financial advisor is
+              managing dozens of accounts. Your employer is looking out for the company. None of
+              that is a criticism — it is just reality. The people in those roles are not bad
+              people. But they do not know your life the way you do, and they cannot care about
+              your outcome the way you do.
+            </p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              That means you have to ask the hard questions, push back when something does not
+              feel right, do your own research, and stay engaged in your own health, money, and
+              decisions — not just hand them off and hope for the best. Retirement is exactly
+              when this matters most.
+            </p>
+            <div className="p-4 rounded-xl border border-amber-900/40 bg-gradient-to-br from-amber-950/30 to-gray-900/60">
+              <Quote size={16} className="text-amber-500/40 mb-2" />
+              <p className="text-gray-100 text-sm leading-relaxed italic pl-2 mb-2">
+                "If you don't design your own life plan, chances are you'll fall into someone
+                else's plan. And guess what they have planned for you? Not much."
+              </p>
+              <span className="text-amber-400 font-semibold text-xs pl-2">— Jim Rohn</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n={4} />
+          <div>
             <p className="text-gray-200 font-medium mb-1">Never stop — just keep moving and learning</p>
             <p className="text-gray-400 text-sm leading-relaxed">
               The people who thrive are not the ones who finally rest — they are the ones who
@@ -1356,6 +1384,7 @@ const QUOTES = [
   { quote: 'Work harder on yourself than you do on your job.', author: 'Jim Rohn' },
   { quote: 'The greatest gift you can give somebody is your own personal development.', author: 'Jim Rohn' },
   { quote: 'Don\'t just read the easy stuff. You may be entertained by it, but you will never grow from it.', author: 'Jim Rohn' },
+  { quote: 'If you don\'t design your own life plan, chances are you\'ll fall into someone else\'s plan. And guess what they have planned for you? Not much.', author: 'Jim Rohn' },
   // Winston Churchill
   { quote: 'Success is not final, failure is not fatal: it is the courage to continue that counts.', author: 'Winston Churchill' },
   { quote: 'We make a living by what we get; we make a life by what we give.', author: 'Winston Churchill' },
