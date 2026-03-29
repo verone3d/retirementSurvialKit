@@ -1581,25 +1581,43 @@ function Chapter11() {
         <div className="flex gap-4">
           <StepNumber n={1} />
           <div>
-            <p className="text-gray-200 font-medium mb-1">Join something — a club, a cause, a community</p>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              For me it was joining an amateur radio club. Suddenly I was surrounded by people
-              of all ages and backgrounds who shared a curiosity. It opened doors I did not
-              even know existed. Whatever your interest — there is a community built around it,
-              and they are waiting for someone with your experience.
+            <p className="text-gray-200 font-medium mb-1">Amateur radio — a lifelong want that finally found its moment</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              I had wanted to get into amateur radio my whole life. But life, work, raising a
+              family — and honestly the expense — always pointed me away from it. Then about two
+              years ago the right moment arrived: I traded a friend's old HF radio for an old 3D
+              printer. That one trade changed the direction of everything. I joined a club,
+              got my license, and suddenly I was surrounded by people of all ages and backgrounds
+              who shared a curiosity that matched mine perfectly.
             </p>
+            <ResourceLink
+              title="ARRL — Find a Local Ham Radio Club"
+              description="The American Radio Relay League. Search for a club near you. Ham radio spans every age, background, and interest."
+              href="https://www.arrl.org/find-a-club"
+            />
           </div>
         </div>
 
         <div className="flex gap-4">
           <StepNumber n={2} />
           <div>
-            <p className="text-gray-200 font-medium mb-1">See3D — 3D printing for the blind</p>
+            <p className="text-gray-200 font-medium mb-1">See3D — how a moment of darkness opened a door</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
-              I started making donations and prints for See3D — an organization that provides
-              tactile 3D printed models for visually impaired individuals. If you get the printer
-              bug, this is one of the most direct ways to turn it into something meaningful.
+              On <strong className="text-white">July 19, 2020</strong> — a date I will never forget
+              — I woke up blind in my left eye. Three eye surgeries and over two months away from
+              work followed. It was the first extended time off in my life. During that time,
+              searching and thinking and trying to make sense of it, I came across a video of a
+              young woman describing why and how she started a charity called{' '}
+              <strong className="text-white">See3D</strong> — an organization that connects 3D
+              printing volunteers with visually impaired individuals who benefit from tactile
+              models. Something clicked. Out of one of the hardest seasons of my life came one
+              of the most meaningful paths I have walked.
             </p>
+            <ResourceLink
+              title="The video that started it — See3D Founder"
+              description="The talk that introduced me to See3D. Watch it. It is short, it is honest, and it will stay with you."
+              href="https://www.youtube.com/watch?v=uf_Qw8mcMh0"
+            />
             <ResourceLink
               title="See3D.org"
               description="Connecting 3D printing volunteers with visually impaired individuals who benefit from tactile models."
@@ -1644,7 +1662,7 @@ function Chapter11() {
       <SectionTitle>Where to Start Looking</SectionTitle>
       <div className="grid gap-3 sm:grid-cols-2 text-sm">
         {[
-          ['Amateur Radio Club', 'ARRL.org — find a local club. Ham radio spans every age and background.'],
+          ['Amateur Radio Club', 'ARRL.org — find a local club. The trade that started all of this for me.'],
           ['See3D', 'If you have a printer, put it to work for someone who can feel but not see your prints.'],
           ['Local Makerspace', 'Share what you know about the Pi, the printer, the display. Someone there needs a mentor.'],
           ['Volunteer Match', 'VolunteerMatch.org — search by skill and location. Your skills are in demand.'],
