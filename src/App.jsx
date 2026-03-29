@@ -1397,6 +1397,7 @@ const QUOTES = [
   { quote: 'As I grow older, I pay less attention to what men say. I just watch what they do.', author: 'Andrew Carnegie' },
   { quote: 'People who are unable to motivate themselves must be content with mediocrity, no matter how impressive their other talents.', author: 'Andrew Carnegie' },
   { quote: 'No man can become rich without himself enriching others.', author: 'Andrew Carnegie' },
+  { quote: 'There is little success where there is little laughter.', author: 'Andrew Carnegie' },
   // Albert Einstein
   { quote: 'Imagination is more important than knowledge.', author: 'Albert Einstein' },
   { quote: 'Life is like riding a bicycle. To keep your balance, you must keep moving.', author: 'Albert Einstein' },
