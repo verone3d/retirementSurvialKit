@@ -431,6 +431,19 @@ ls`} />
           with just your GitHub username and a Personal Access Token (PAT) as your password.
           GitHub will prompt you the first time.
         </Callout>
+
+        <div className="mt-4 p-4 rounded-xl border border-amber-900/50 bg-amber-950/20">
+          <p className="text-amber-200 text-sm font-semibold mb-1">A note from me on this</p>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Sharing GitHub repos publicly is honestly a new part of this journey for me too.
+            I am still learning the best ways to share work and make it easy for others to
+            access. If you run into any trouble cloning, viewing, or accessing anything I have
+            shared — <strong className="text-white">reach out to me directly.</strong> Do not
+            spend time fighting it alone. This is one of those areas where a five-minute
+            conversation will save you two hours of frustration, and I am happy to walk through
+            it with you.
+          </p>
+        </div>
       </div>
     </div>
   )
