@@ -162,7 +162,7 @@ function Chapter1() {
           "Get up and learn one thing everyday."
         </p>
         <p className="text-amber-400 text-sm mt-2 font-semibold">— Ralph E. Mong Sr.</p>
-        <p className="text-amber-600 text-xs mt-1">Verone VanWormer's Grandfather · Words passed down and still being lived</p>
+        <p className="text-amber-600 text-xs mt-1">Verone VanWormer's Grandfather · Born 1899 · Words passed down and still being lived</p>
       </div>
 
       <p className="text-gray-300 leading-relaxed mb-4">
@@ -2006,7 +2006,7 @@ export default function App() {
 
         <footer className="border-t border-gray-800/60 py-4 px-6 text-center">
           <p className="text-xs text-gray-700 font-mono">
-            Retirement Survival Kit · Get up and learn one thing everyday. — Ralph E. Mong Sr.
+            Retirement Survival Kit · "Get up and learn one thing everyday." — Ralph E. Mong Sr. (1899)
           </p>
         </footer>
       </div>
