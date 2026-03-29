@@ -1424,6 +1424,78 @@ const QUOTES = [
   { quote: 'Tell me and I forget. Teach me and I remember. Involve me and I learn.', author: 'Benjamin Franklin' },
   { quote: 'The man who does not read good books has no advantage over the man who cannot read.', author: 'Mark Twain' },
   { quote: 'Go to the edge of the cliff and jump off. Build your wings on the way down.', author: 'Ray Bradbury' },
+  // Theodore Roosevelt
+  { quote: 'Do what you can, with what you have, where you are.', author: 'Theodore Roosevelt' },
+  { quote: 'Believe you can and you\'re halfway there.', author: 'Theodore Roosevelt' },
+  { quote: 'It is not the critic who counts; not the man who points out how the strong man stumbles. The credit belongs to the man who is actually in the arena.', author: 'Theodore Roosevelt' },
+  { quote: 'Far better it is to dare mighty things, to win glorious triumphs, even though checkered by failure, than to take rank with those poor spirits who neither enjoy nor suffer much.', author: 'Theodore Roosevelt' },
+  { quote: 'Keep your eyes on the stars, and your feet on the ground.', author: 'Theodore Roosevelt' },
+  // Abraham Lincoln
+  { quote: 'In the end, it\'s not the years in your life that count. It\'s the life in your years.', author: 'Abraham Lincoln' },
+  { quote: 'Whatever you are, be a good one.', author: 'Abraham Lincoln' },
+  { quote: 'Give me six hours to chop down a tree and I will spend the first four sharpening the axe.', author: 'Abraham Lincoln' },
+  { quote: 'I am a slow walker, but I never walk back.', author: 'Abraham Lincoln' },
+  { quote: 'The best way to predict your future is to create it.', author: 'Abraham Lincoln' },
+  // Ralph Waldo Emerson
+  { quote: 'Do not go where the path may lead, go instead where there is no path and leave a trail.', author: 'Ralph Waldo Emerson' },
+  { quote: 'What lies behind us and what lies before us are tiny matters compared to what lies within us.', author: 'Ralph Waldo Emerson' },
+  { quote: 'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.', author: 'Ralph Waldo Emerson' },
+  { quote: 'Finish each day and be done with it. You have done what you could.', author: 'Ralph Waldo Emerson' },
+  { quote: 'Once you make a decision, the universe conspires to make it happen.', author: 'Ralph Waldo Emerson' },
+  // Henry Ford
+  { quote: 'Whether you think you can, or you think you can\'t — you\'re right.', author: 'Henry Ford' },
+  { quote: 'Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young.', author: 'Henry Ford' },
+  { quote: 'Obstacles are those frightful things you see when you take your eyes off your goal.', author: 'Henry Ford' },
+  { quote: 'Coming together is a beginning, staying together is progress, and working together is success.', author: 'Henry Ford' },
+  // Marcus Aurelius
+  { quote: 'The impediment to action advances action. What stands in the way becomes the way.', author: 'Marcus Aurelius' },
+  { quote: 'You have power over your mind, not outside events. Realize this, and you will find strength.', author: 'Marcus Aurelius' },
+  { quote: 'Waste no more time arguing about what a good man should be. Be one.', author: 'Marcus Aurelius' },
+  { quote: 'When you wake up in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.', author: 'Marcus Aurelius' },
+  { quote: 'The best revenge is to be unlike him who performed the injury.', author: 'Marcus Aurelius' },
+  // Seneca
+  { quote: 'Luck is what happens when preparation meets opportunity.', author: 'Seneca' },
+  { quote: 'We suffer more in imagination than in reality.', author: 'Seneca' },
+  { quote: 'Begin at once to live, and count each separate day as a separate life.', author: 'Seneca' },
+  { quote: 'It is not because things are difficult that we dare not venture. It is because we dare not venture that they are difficult.', author: 'Seneca' },
+  { quote: 'He who is brave is free.', author: 'Seneca' },
+  // Aristotle
+  { quote: 'We are what we repeatedly do. Excellence, then, is not an act but a habit.', author: 'Aristotle' },
+  { quote: 'It is during our darkest moments that we must focus to see the light.', author: 'Aristotle' },
+  { quote: 'The more you know, the more you know you don\'t know.', author: 'Aristotle' },
+  // Henry David Thoreau
+  { quote: 'Go confidently in the direction of your dreams. Live the life you have imagined.', author: 'Henry David Thoreau' },
+  { quote: 'What you get by achieving your goals is not as important as what you become by achieving your goals.', author: 'Henry David Thoreau' },
+  { quote: 'Not till we are lost, in other words not till we have lost the world, do we begin to find ourselves.', author: 'Henry David Thoreau' },
+  // Napoleon Hill
+  { quote: 'Whatever the mind can conceive and believe, it can achieve.', author: 'Napoleon Hill' },
+  { quote: 'A goal is a dream with a deadline.', author: 'Napoleon Hill' },
+  { quote: 'The starting point of all achievement is desire.', author: 'Napoleon Hill' },
+  // More Mark Twain
+  { quote: 'Twenty years from now you will be more disappointed by the things that you didn\'t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor.', author: 'Mark Twain' },
+  { quote: 'Courage is resistance to fear, mastery of fear, not absence of fear.', author: 'Mark Twain' },
+  // More Thomas Edison
+  { quote: 'Many of life\'s failures are people who did not realize how close they were to success when they gave up.', author: 'Thomas Edison' },
+  // More Winston Churchill
+  { quote: 'The price of greatness is responsibility.', author: 'Winston Churchill' },
+  { quote: 'Courage is what it takes to stand up and speak; courage is also what it takes to sit down and listen.', author: 'Winston Churchill' },
+  // More Jim Rohn
+  { quote: 'Your life does not get better by chance, it gets better by change.', author: 'Jim Rohn' },
+  { quote: 'You must take personal responsibility. You cannot change the circumstances, the seasons, or the wind, but you can change yourself.', author: 'Jim Rohn' },
+  // Charles Darwin
+  { quote: 'It is not the strongest of the species that survives, nor the most intelligent; it is the one most adaptable to change.', author: 'Charles Darwin' },
+  // Walt Disney
+  { quote: 'All our dreams can come true, if we have the courage to pursue them.', author: 'Walt Disney' },
+  { quote: 'The way to get started is to quit talking and begin doing.', author: 'Walt Disney' },
+  { quote: 'It\'s kind of fun to do the impossible.', author: 'Walt Disney' },
+  // Friedrich Nietzsche
+  { quote: 'That which does not kill us makes us stronger.', author: 'Friedrich Nietzsche' },
+  // Socrates
+  { quote: 'The secret of change is to focus all of your energy not on fighting the old, but on building the new.', author: 'Socrates' },
+  { quote: 'An unexamined life is not worth living.', author: 'Socrates' },
+  // More classics
+  { quote: 'The journey of a thousand miles begins with one step.', author: 'Lao Tzu' },
+  { quote: 'Fall seven times, stand up eight.', author: 'Japanese Proverb' },
 ]
 
 function Chapter10() {
