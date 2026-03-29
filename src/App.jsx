@@ -368,7 +368,12 @@ git add . && git commit -m "add session notes" && git push`} />
         </div>
       </div>
 
-      <SectionTitle>See It In Action — Real Projects</SectionTitle>
+      <SectionTitle>See It In Action — Try Cloning These</SectionTitle>
+      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+        These repos are <strong className="text-white">public</strong> — anyone can view and clone
+        them with no login required. This is a great first exercise: clone one to your Pi and
+        explore how a real project is structured.
+      </p>
       <ResourceLink
         title="verone3d/esp32-tft-project"
         description="The ESP32 display project from Chapter 4. Real code, real documentation, built step by step."
@@ -379,6 +384,54 @@ git add . && git commit -m "add session notes" && git push`} />
         description="A stock ticker running on the ESP32 display. A complete project from idea to working hardware."
         href="https://github.com/verone3d/stock-ticker"
       />
+
+      <CodeBlock lang="bash" code={`# Clone either repo to your Pi — no login needed
+git clone https://github.com/verone3d/esp32-tft-project
+git clone https://github.com/verone3d/stock-ticker
+
+# Then browse the files
+cd esp32-tft-project
+ls`} />
+
+      <SectionTitle>Public vs Private — Understanding Visibility</SectionTitle>
+      <div className="space-y-4">
+        <div className="grid gap-3 sm:grid-cols-2 text-sm">
+          <div className="bg-green-950/30 border border-green-800/50 rounded-lg p-4">
+            <p className="text-green-300 font-semibold mb-1">Public repo</p>
+            <p className="text-gray-400 text-xs leading-relaxed">Anyone can view and clone — no account needed. Great for sharing projects, portfolios, and learning resources.</p>
+            <p className="text-green-400 text-xs mt-2 font-mono">Settings → General → Change visibility → Public</p>
+          </div>
+          <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-4">
+            <p className="text-gray-200 font-semibold mb-1">Private repo</p>
+            <p className="text-gray-400 text-xs leading-relaxed">Only you can see it — unless you invite collaborators. Good for personal notes, work in progress, or anything sensitive.</p>
+            <p className="text-gray-500 text-xs mt-2 font-mono">Settings → Collaborators → Add people → Read access</p>
+          </div>
+        </div>
+
+        <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-4 text-sm">
+          <p className="text-amber-400 font-semibold text-xs mb-2">If someone can see your repo but cannot clone it, it is usually one of these:</p>
+          <ul className="space-y-1.5 text-gray-400 text-xs">
+            {[
+              "They haven't accepted the collaborator invite yet",
+              'They are cloning with SSH but have not configured SSH keys',
+              'They are using HTTPS but do not have a Personal Access Token set up',
+              "The repo is in an org with SSO required and they didn't authorize",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <ChevronRight size={12} className="text-amber-500 shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <Callout type="tip" title="HTTPS is easiest to start — no SSH keys needed">
+          Clone with <code className="text-amber-300 font-mono text-xs bg-gray-900 px-1 rounded">https://</code> URLs
+          until you are comfortable. SSH is faster once set up, but HTTPS works out of the box
+          with just your GitHub username and a Personal Access Token (PAT) as your password.
+          GitHub will prompt you the first time.
+        </Callout>
+      </div>
     </div>
   )
 }
