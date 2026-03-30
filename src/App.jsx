@@ -1687,6 +1687,12 @@ function Chapter11() {
           ['See3D', 'If you have a printer, put it to work for someone who can feel but not see your prints.'],
           ['Local Makerspace', 'Share what you know about the Pi, the printer, the display. Someone there needs a mentor.'],
           ['Volunteer Match', 'VolunteerMatch.org — search by skill and location. Your skills are in demand.'],
+          ['Asha for Education', 'AshaNet.org — volunteers with tech and engineering backgrounds mentor students in India. Your career is a roadmap someone there is desperately looking for.'],
+          ['India Development & Relief Fund', 'IDRF.org — connects the Indian diaspora with grassroots projects across India. Health, education, rural development. Find a cause that matches your roots.'],
+          ['SEWA — Self Employed Women\'s Association', 'SEWA.org — India-based, women-led. If mentoring working people through transitions matters to you, this is one of the most respected organizations on the ground.'],
+          ['Pratham', 'Pratham.org — improving literacy and learning for children across India. They actively work with diaspora volunteers for tutoring, fundraising, and awareness.'],
+          ['iVolunteer India', 'ivolunteerindia.org — India\'s largest volunteer network. Search by skill — tech, design, teaching. You do not have to be there in person to make a difference.'],
+          ['Your Home Village or District', 'You likely know people, or know of needs, from where you grew up. A direct call or connection back to family there can open a door that no website will ever find for you.'],
         ].map(([title, desc]) => (
           <div key={title} className="bg-gray-900/60 border border-gray-800 rounded-lg px-4 py-3">
             <p className="text-amber-400 font-semibold text-xs mb-1">{title}</p>
