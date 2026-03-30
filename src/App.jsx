@@ -598,7 +598,7 @@ function Chapter3() {
             <div className="grid gap-3 sm:grid-cols-2 mt-4 text-sm">
               {[
                 ['Learn Python', "The Pi comes with Python. It's the most beginner-friendly language ever made.", 'https://projects.raspberrypi.org/en/projects/hello-world'],
-                ['Build a web server', 'Serve a webpage from your Pi to any device on your home network.', 'https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress'],
+                ['Build a web server', 'Serve a webpage from your Pi using Flask — simple Python, no bloat.', 'https://projects.raspberrypi.org/en/projects/python-web-server-with-flask'],
                 ['Home dashboard', 'Display weather, calendar, or custom info on a screen.', 'https://projects.raspberrypi.org/en/projects/make-a-pico-w-temperature-display'],
                 ['RetroPie', 'Turn it into a retro game console. Entirely optional. Entirely fun.', 'https://retropie.org.uk/docs/First-Installation/'],
               ].map(([title, desc, href]) => (
