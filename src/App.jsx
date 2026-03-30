@@ -406,29 +406,23 @@ git add . && git commit -m "add session notes" && git push`} />
         </div>
       </div>
 
-      <SectionTitle>See It In Action — Try Cloning These</SectionTitle>
+      <SectionTitle>See It In Action — Try Cloning This</SectionTitle>
       <p className="text-gray-400 text-sm leading-relaxed mb-4">
-        These repos are <strong className="text-white">public</strong> — anyone can view and clone
-        them with no login required. This is a great first exercise: clone one to your Pi and
+        This repo is <strong className="text-white">public</strong> — anyone can view and clone
+        it with no login required. This is a great first exercise: clone it to your Pi and
         explore how a real project is structured.
       </p>
       <ResourceLink
-        title="verone3d/esp32-tft-project"
-        description="The ESP32 display project from Chapter 4. Real code, real documentation, built step by step."
-        href="https://github.com/verone3d/esp32-tft-project"
-      />
-      <ResourceLink
-        title="verone3d/stock-ticker"
-        description="A stock ticker running on the ESP32 display. A complete project from idea to working hardware."
-        href="https://github.com/verone3d/stock-ticker"
+        title="verone3d/retirementSurvialKit"
+        description="This guide — the full source code behind what you are reading right now. Built with React and Vite, documented step by step."
+        href="https://github.com/verone3d/retirementSurvialKit"
       />
 
-      <CodeBlock lang="bash" code={`# Clone either repo to your Pi — no login needed
-git clone https://github.com/verone3d/esp32-tft-project
-git clone https://github.com/verone3d/stock-ticker
+      <CodeBlock lang="bash" code={`# Clone the repo to your Pi — no login needed
+git clone https://github.com/verone3d/retirementSurvialKit
 
 # Then browse the files
-cd esp32-tft-project
+cd retirementSurvialKit
 ls`} />
 
       <SectionTitle>Public vs Private — Understanding Visibility</SectionTitle>
@@ -738,21 +732,16 @@ function Chapter4() {
         ))}
       </div>
 
-      <SectionTitle>Real Projects — Built and Documented</SectionTitle>
+      <SectionTitle>Real Project — Built and Documented</SectionTitle>
       <p className="text-gray-400 text-sm leading-relaxed mb-4">
-        The best way to learn is to follow a path someone already walked. These GitHub repos
-        document exactly that journey — from setup to working project, with all the mistakes
+        The best way to learn is to follow a path someone already walked. This GitHub repo
+        documents exactly that journey — from setup to working project, with all the mistakes
         included:
       </p>
       <ResourceLink
-        title="verone3d/esp32-tft-project"
-        description="Complete ESP32 TFT display setup — wiring, libraries, first programs. A real path through the learning curve."
-        href="https://github.com/verone3d/esp32-tft-project"
-      />
-      <ResourceLink
-        title="verone3d/stock-ticker"
-        description="A live stock ticker on the ESP32 display. Fetches real data from an API, displays it in real time."
-        href="https://github.com/verone3d/stock-ticker"
+        title="verone3d/retirementSurvialKit"
+        description="The source code for this entire guide. React, Vite, and a lot of care — explore it, learn from it, make it your own."
+        href="https://github.com/verone3d/retirementSurvialKit"
       />
 
       <SectionTitle>Get Started: Arduino IDE</SectionTitle>
