@@ -597,17 +597,85 @@ function Chapter3() {
             />
             <div className="grid gap-3 sm:grid-cols-2 mt-4 text-sm">
               {[
-                ['Learn Python', "The Pi comes with Python. It's the most beginner-friendly language ever made."],
-                ['Build a web server', 'Serve a webpage from your Pi to any device on your home network.'],
-                ['Home dashboard', 'Display weather, calendar, or custom info on a screen.'],
-                ['RetroPie', 'Turn it into a retro game console. Entirely optional. Entirely fun.'],
-              ].map(([title, desc]) => (
-                <div key={title} className="bg-gray-900/60 border border-gray-800 rounded-lg px-4 py-3">
-                  <p className="text-amber-400 font-semibold text-xs mb-1">{title}</p>
+                ['Learn Python', "The Pi comes with Python. It's the most beginner-friendly language ever made.", 'https://projects.raspberrypi.org/en/projects/hello-world'],
+                ['Build a web server', 'Serve a webpage from your Pi to any device on your home network.', 'https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress'],
+                ['Home dashboard', 'Display weather, calendar, or custom info on a screen.', 'https://projects.raspberrypi.org/en/projects/make-a-pico-w-temperature-display'],
+                ['RetroPie', 'Turn it into a retro game console. Entirely optional. Entirely fun.', 'https://retropie.org.uk/docs/First-Installation/'],
+              ].map(([title, desc, href]) => (
+                <a key={title} href={href} target="_blank" rel="noopener noreferrer"
+                  className="bg-gray-900/60 border border-gray-800 hover:border-amber-500/50 hover:bg-gray-900 rounded-lg px-4 py-3 transition-colors group">
+                  <p className="text-amber-400 group-hover:text-amber-300 font-semibold text-xs mb-1">{title} ↗</p>
                   <p className="text-gray-400 text-xs leading-relaxed">{desc}</p>
-                </div>
+                </a>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      <SectionTitle>Back Up Your SD Card — Before You Break Anything</SectionTitle>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        The Pi runs entirely off a microSD card. That card is also the thing you will eventually
+        corrupt, fill up, or misconfigure. The fix is always the same — reflash and start over.
+        But if you made a good working image <em>before</em> the dumb move, you are back in
+        5 minutes instead of an hour.
+      </p>
+      <Callout type="tip" title="Make a backup once you have a clean setup">
+        Get the Pi updated, WiFi connected, and any basics configured — then image the card before
+        you start experimenting. That snapshot becomes your "undo" button. Future you will be grateful.
+      </Callout>
+
+      <div className="space-y-5 mt-4">
+        <div className="flex gap-4">
+          <StepNumber n="▸" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Easiest method — SD Card Copier (built into the Pi)</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-2">
+              Plug a second microSD card into a USB adapter. On the Pi, go to{' '}
+              <strong className="text-white">Accessories → SD Card Copier</strong>. Select your
+              boot card as the source and the blank card as the destination. Hit Start. Done.
+              No commands needed, no third-party software.
+            </p>
+            <p className="text-gray-400 text-sm">
+              The copy is bootable — swap it in and the Pi comes up exactly as it was.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="▸" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Command-line method — <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">dd</code> from another Linux or Mac machine</p>
+            <p className="text-gray-400 text-sm mb-2">
+              Shut the Pi down, remove the card, plug it into another machine. Find the device
+              name with <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">lsblk</code> (Linux) or{' '}
+              <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">diskutil list</code> (Mac), then:
+            </p>
+            <CodeBlock lang="bash" code={`# Linux — replace sdX with your actual device (e.g. sdb)
+sudo dd if=/dev/sdX of=~/pi-backup.img bs=4M status=progress
+
+# Mac — replace diskN with your actual disk (e.g. disk2)
+sudo dd if=/dev/diskN of=~/pi-backup.img bs=4m`} />
+            <p className="text-gray-400 text-sm mt-2">
+              To restore: reverse the <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">if=</code> and <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">of=</code>. Or use{' '}
+              <strong className="text-white">Raspberry Pi Imager</strong> — choose "Use custom image"
+              and point it at your .img file.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="▸" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Label your backups — your future self cannot read your past self's mind</p>
+            <p className="text-gray-400 text-sm">
+              Name the file something useful:{' '}
+              <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">pi-clean-2025-06.img</code>,{' '}
+              <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">pi-after-nodejs.img</code>, etc.
+              A 32 GB card compresses down to 3–5 GB with{' '}
+              <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">gzip</code> if storage is tight.
+              Keep at least one copy somewhere other than the Pi itself.
+            </p>
           </div>
         </div>
       </div>
@@ -687,6 +755,145 @@ node --version  # should show v20 or higher`} />
               Every great prompt you craft is a reusable asset. Log it to your prompts repo
               (from Chapter 2). In six months, that collection will be worth more than any book.
             </Callout>
+          </div>
+        </div>
+      </div>
+
+      <SectionTitle>Move a Project to Another Pi — or Anywhere</SectionTitle>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        If your project lives in a git repo, it is already portable. You do not need to copy
+        files manually — you just clone it. This is the whole point of version control: your
+        work lives in the cloud, not on one specific piece of hardware.
+      </p>
+
+      <div className="space-y-5">
+        <div className="flex gap-4">
+          <StepNumber n="1" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Make sure everything is committed and pushed</p>
+            <p className="text-gray-400 text-sm mb-2">
+              On the source Pi, from inside your project folder:
+            </p>
+            <CodeBlock lang="bash" code={`git status                  # should show nothing pending
+git push origin main        # push any recent changes up to GitHub`} />
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="2" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Clone it on the new Pi</p>
+            <CodeBlock lang="bash" code={`git clone https://github.com/your-username/your-repo.git
+cd your-repo`} />
+            <p className="text-gray-400 text-sm mt-2">
+              That pulls every file, every commit, every branch — the complete history — onto
+              the new machine in seconds.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="3" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Reinstall dependencies</p>
+            <p className="text-gray-400 text-sm mb-2">
+              Most projects need one command to restore their libraries. Common ones:
+            </p>
+            <div className="space-y-2">
+              {[
+                ['Python project', 'pip install -r requirements.txt'],
+                ['Node.js project', 'npm install'],
+                ['System packages', 'sudo apt install <package-name>'],
+              ].map(([label, cmd]) => (
+                <div key={label} className="flex gap-3 text-sm">
+                  <span className="shrink-0 text-gray-500 text-xs w-32 mt-0.5">{label}</span>
+                  <code className="text-amber-300 bg-gray-900 border border-gray-700 px-2 py-0.5 rounded font-mono text-xs">{cmd}</code>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-400 text-sm mt-3">
+              If you tracked your system-level installs in a README or a shell script in the repo,
+              this step is trivial. If you did not — lesson learned, add that file now.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <SectionTitle>Use GitHub to Restore a Dead Pi</SectionTitle>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        SD card failed. Card corrupted. Wrong <code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">dd</code> command.
+        Whatever happened — if your projects were on GitHub, recovery is not a disaster.
+        It is an afternoon.
+      </p>
+      <Callout type="tip" title="GitHub does not replace an SD image — it complements it">
+        An SD image restores the whole OS in one shot but can be large and goes stale fast.
+        GitHub restores your actual work — the code, scripts, configs, and notes that matter.
+        Use both: image for the OS baseline, GitHub for everything you built on top.
+      </Callout>
+
+      <div className="space-y-5 mt-4">
+        <div className="flex gap-4">
+          <StepNumber n="1" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Flash a fresh SD card</p>
+            <p className="text-gray-400 text-sm">
+              Download <strong className="text-white">Raspberry Pi Imager</strong> on any machine,
+              write Raspberry Pi OS to a new card, boot it, do first-boot setup. Takes about
+              15 minutes from zero.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="2" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Reinstall your tools</p>
+            <p className="text-gray-400 text-sm mb-2">
+              Run your usual setup commands. If you kept a setup script in GitHub, this is one step:
+            </p>
+            <CodeBlock lang="bash" code={`# Example: if you kept a setup.sh in your dotfiles repo
+git clone https://github.com/your-username/dotfiles.git
+bash dotfiles/setup.sh`} />
+            <p className="text-gray-400 text-sm mt-2">
+              Even without a script, reinstalling Node.js, Claude Code, and your usual packages
+              takes under 10 minutes if you know the commands. Keep a cheat sheet.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="3" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">Clone your repos back down</p>
+            <CodeBlock lang="bash" code={`# Get a list of all your repos
+gh repo list your-username --limit 50
+
+# Clone each one you want back
+git clone https://github.com/your-username/project-name.git`} />
+            <p className="text-gray-400 text-sm mt-2">
+              Install the GitHub CLI (<code className="text-amber-300 font-mono text-xs bg-gray-900 border border-gray-700 px-1.5 py-0.5 rounded">sudo apt install gh</code>) to
+              make this even easier. You can clone all your repos in a loop if you want everything back at once.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <StepNumber n="4" />
+          <div>
+            <p className="text-gray-200 font-medium mb-1">What GitHub cannot restore — plan for it now</p>
+            <div className="space-y-1 text-sm">
+              {[
+                ['API keys / passwords', 'Never commit these. Store them in a password manager or write them down somewhere safe.'],
+                ['~/.bashrc customizations', 'Keep a copy of your .bashrc in a dotfiles repo on GitHub.'],
+                ['cron jobs', 'Document them in your repo README or a crontab.txt file.'],
+                ['System config files', 'Copy /etc files you modified into your repo if they matter.'],
+              ].map(([item, note]) => (
+                <div key={item} className="flex gap-3 bg-gray-900/60 px-3 py-2 rounded-lg border border-gray-800">
+                  <span className="shrink-0 text-amber-400 font-mono text-xs w-36 mt-0.5">{item}</span>
+                  <span className="text-gray-400 text-xs leading-relaxed">{note}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
