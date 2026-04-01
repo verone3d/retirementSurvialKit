@@ -1746,7 +1746,15 @@ function Chapter10() {
 
       <Callout type="tip" title="Put these on the display">
         The ESP32 display from Chapter 4 is perfect for cycling through quotes. Load them on it
-        and leave it on your desk. A small thing — but it adds up over time.
+        and leave it on your desk. A small thing — but it adds up over time.{' '}
+        <a
+          href="https://randomnerdtutorials.com/?s=Cheap+Yellow+Display"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-amber-400 hover:text-amber-300 underline underline-offset-2"
+        >
+          Steps to do it ↗
+        </a>
       </Callout>
     </div>
   )
